@@ -2,27 +2,38 @@ import java.util.Scanner; // mettre dans Menu.java après
 
 public class Human extends Player {
 	
-	protected int Play(int size) throws BadInput {
+	Scanner sc = new Scanner(System.in);
+	
+	protected int Play(int size) throws HumanPlayException{
+		System.out.println("Input column :");
+		int pos = this.sc.nextInt();	
 		
-		Scanner sc = new Scanner(System.in);
-		
-		try {
-			System.out.println("Input column :");
-			int pos = sc.nextInt();
-			if (pos<size && pos>=0) {
-				sc.close();
-				return pos;
-			} else
-				sc.close();
-				throw new BadInput(pos);
-		} finally {
-			sc.close();
-		}
-		
+		if (0 > pos || pos > size)
+			throw new HumanPlayException(pos);
+		return pos;
 	}
+	
+	//	protected int Play(int size) throws HumanPlayException{
+//		
+//		int pos = -1;
+//		while (0 > pos || pos > size) {
+//			System.out.println("Input column :");
+//			pos = this.sc.nextInt();	
+//			if (0 > pos || pos > size)
+//				throw new HumanPlayException(pos);
+//		}
+//		return pos;
+//	}
 	
 	protected Human(String nickname) {
 		this.nickname = nickname;
 	}
 	
+	protected void closeScanner() {
+		this.sc.close();
+	}
+	
+	protected void nextScanner() {
+		this.sc.next();
+	}
 }
