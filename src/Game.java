@@ -1,11 +1,14 @@
 public class Game extends Menu {
 	
-	/* à modifier bite ! */
+	/* à modifier! */
 	
 	public static void main(String[] args) {
 		
-		Human p1 = new Human("toto");
-		Human p2 = new Human("titi");
+		Token t1 = new Token('X');
+		Token t2 = new Token('0');
+		
+		Human p1 = new Human("toto",t1);
+		Human p2 = new Human("titi",t2);
 		int i = 0;
 		int j = 0;
 		int k=-1; 
@@ -22,7 +25,7 @@ public class Game extends Menu {
 			while(i<0){
 				try{
 					i = p1.Play(7);
-					k = mygrid.insertToken(i, 't');
+					k = mygrid.insertToken(i, 't'); // get token player
 				} catch(HumanPlayException err) {
 					System.out.println(err);
 					i = -1;

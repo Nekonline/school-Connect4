@@ -4,8 +4,9 @@ public class Human extends Player {
 	
 	Scanner sc = new Scanner(System.in);
 	
-	protected Human(String nickname) {
+	protected Human(String nickname, Token token) {
 		this.nickname = nickname;
+		this.token = token;
 	}
 	
 	protected int Play(int size) throws HumanPlayException {

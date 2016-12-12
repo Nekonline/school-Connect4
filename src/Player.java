@@ -1,6 +1,7 @@
 public abstract class Player {
 	
 	protected String nickname;
+	protected Token token;
 	
 	protected String getNickname() { return this.nickname; }
 	
