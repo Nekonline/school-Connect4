@@ -7,11 +7,11 @@ public class Token {
 		this.c = c;
 	}
 	
-	protected char GetToken(){
+	protected char GetChar(){
 		return this.c;
 	}
 	
-	protected void SetToken(char c){
+	protected void SetChar(char c){
 		this.c = c;
 	}
 	

@@ -5,12 +5,12 @@ public class Grid {
 	int height;
 	char grid[][];
 
+	
 	protected Grid(int width, int height) {
 		this.height = height;
 		this.width = width;
 		this.grid = new char[height][width];
 	}
-	
 	
 	protected int getHeight() {
 		return this.height;		
@@ -31,7 +31,7 @@ public class Grid {
 	protected void displayGrid(){
 		int i,j,k;
 		
-		for (k=0; k<width; k++){
+		for (k=1; k<width+1; k++){
 			System.out.print(k +"  ");
 		}
 		System.out.print("\n");
@@ -41,23 +41,23 @@ public class Grid {
 				System.out.print(grid[j][i]+"  ");
 			}
 			System.out.print("\n");
-		}
-		
+		}	
 	}
 	
-	protected int insertToken(int column, char c) throws GridInsertException{
+	protected int insertToken(int column, Token token) throws GridInsertException{
 		int i;
+		char c = token.GetChar();
 		for(i=height-1; i>=0; i--){
-			if(grid[i][column]=='.'){
-				grid[i][column]=c;
+			if(grid[i][column] == '.'){
+				grid[i][column] = c;
 				return i;
 			}
 		}
 		throw new GridInsertException(column);
 	}
 	
-	protected int checkWin(int line, int column, char c) {
-		
+	protected int checkWin(int line, int column, Token token) {
+		char c = token.GetChar();
 		int i,j;
 		int counter = 1;
 		
@@ -82,13 +82,13 @@ public class Grid {
 		//COLUMN
 		counter = 1;
 		for (i=line-1; i>=0; i--) {
-			if (grid[i][line] == c)
+			if (grid[i][column] == c)
 				counter ++;
 			else 
 				break;
 		}
 		for (i=line+1; i<height; i++) {
-			if (grid[i][line] == c)
+			if (grid[i][column] == c)
 				counter ++;
 			else
 				break;
@@ -98,7 +98,7 @@ public class Grid {
 			return 1;
 		
 		
-		
+		// TODO UNE DIAG EST MERDIQUE
 		// Diag 1
 		counter=1;
 		

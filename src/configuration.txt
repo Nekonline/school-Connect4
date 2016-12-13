@@ -18,6 +18,6 @@
   "nbPlayer" : 2,
   "nbGame2Win" : 3,
   "nbToken2Win" : 4,
-  "gridLength" : 7,
-  "gridWidth" : 5,
+  "gridLength" : 6,
+  "gridWidth" : 7,
 }

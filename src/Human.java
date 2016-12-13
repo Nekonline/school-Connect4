@@ -13,9 +13,9 @@ public class Human extends Player {
 		System.out.println("Input column :");
 		int pos = this.sc.nextInt();	
 		
-		if (0 > pos || pos > size)
+		if (1 > pos || pos > size+1)
 			throw new HumanPlayException(pos);
-		return pos;
+		return pos-1;
 	}
 
 	protected void nextScanner() {

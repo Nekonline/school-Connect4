@@ -1,11 +1,12 @@
-public abstract class Player {
+public abstract class Player{
 	
 	protected String nickname;
 	protected Token token;
 	
-	protected String getNickname() { return this.nickname; }
+	protected String GetNickname() { return this.nickname; }
+	protected Token GetToken() { return this.token; }
 	
-	protected void setNickname(String newnickname) throws SetNicknameException {
+	protected void SetNickname(String newnickname) throws SetNicknameException {
 		if (nickname.length() >= 1)
 			this.nickname = newnickname;
 		else
