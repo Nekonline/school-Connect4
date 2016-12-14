@@ -9,3 +9,5 @@
 /SetNicknameException.class
 /SetPlayerException.class
 /Token.class
+/HumanPlayIntException.class
+/HumanPlayStrException.class

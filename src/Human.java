@@ -9,13 +9,26 @@ public class Human extends Player {
 		this.token = token;
 	}
 	
-	protected int Play(int size) throws HumanPlayException {
+	protected int Play(int size) throws HumanPlayIntException, HumanPlayStrException  {
 		System.out.println("Input column :");
-		int pos = this.sc.nextInt();	
+		int pos; // = this.sc.nextInt();
 		
-		if (1 > pos || pos > size+1)
-			throw new HumanPlayException(pos);
-		return pos-1;
+	   // check if the scanner's next token is an int
+	   if (this.sc.hasNextInt() == false){
+		   String str = this.sc.nextLine();
+		   if (str.length() == 0)
+			  str = this.sc.nextLine();
+		   if (str.equals("sortir"))
+				   return -1;
+		   throw new HumanPlayStrException(str);
+	   }
+	   else {
+		   pos = this.sc.nextInt();
+		   if (1 > pos || pos > size)
+				throw new HumanPlayIntException(pos);
+		   return pos-1;
+	   }	
+	  
 	}
 
 	protected void nextScanner() {

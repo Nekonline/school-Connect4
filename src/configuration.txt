@@ -16,7 +16,7 @@
   
   
   "nbPlayer" : 2,
-  "nbGame2Win" : 3,
+  "nbGame2Win" : 2,
   "nbToken2Win" : 4,
   "gridLength" : 6,
   "gridWidth" : 7,

@@ -53,7 +53,7 @@ public class Grid {
 				return i;
 			}
 		}
-		throw new GridInsertException(column);
+		throw new GridInsertException(column+1);
 	}
 	
 	protected int checkWin(int line, int column, Token token) {
@@ -97,12 +97,10 @@ public class Grid {
 		if (counter >= 4)
 			return 1;
 		
-		
-		// TODO UNE DIAG EST MERDIQUE
 		// Diag 1
 		counter=1;
 		
-		for (i=column-1, j=1; i>=0 && line-j>=0; i--, j--) {
+		for (i=column-1, j=1; i>=0 && line-j>=0; i--, j++) {
 			if (grid[line-j][i] == c)
 				counter ++;
 			else
@@ -127,8 +125,8 @@ public class Grid {
 			else
 				break;
 		}
-		for (i=column+1, j=1; i<width && line-j>=0; i++, j--) {
-			if (grid[line-j][i] == c)
+		for (i=column+1, j=1; i<width && line-j>=0; i++, j++) {
+			if (this.grid[line-j][i] == c)
 				counter ++;
 			else
 				break;
@@ -140,6 +138,12 @@ public class Grid {
 		return 0;		
 		
 	}
-	
-	
+
+	protected int CheckEquality() {
+		for (int i=0; i<this.width; i++) {
+			if (this.grid[0][i] == '.')
+				return 0;			
+		}
+		return 1;
+	}
 }
