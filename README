@@ -1,0 +1,37 @@
+school-Connect4
+Connect 4 game program for a school project at the Enseirb-Matmeca. Using Java.
+Grijol Guillaume & Bondu Jimmy   (https://github.com/Yuu44/school-Connect4)
+
+
+
+Les étapes 1 à 5 ont toutes été complétées.
+
+Bonus réalisés: 
+
+● Permettre d’avoir une grille de taille arbitraire.
+● Permettre d’avoir un nombre arbitraire de joueurs (Implémenter jusqu'à 4 joueurs car 4 jetons sont déclarés) 
+● Permettre de choisir le nombre de jetons nécessaires pour gagner. 
+● Permettre de configurer le nombre de manche à gagner pour remporter la partie
+● Utilisation du format Json pour sauvegarder ses modifications. (utilisation d’une librairie trouvé sur internet)
+ 
+/!\
+● Implémenter un mode multijoueur réseau (dans le deuxième dossier pour ne pas impacter les tests automatiques).
+/!\
+Pour exécuter ce puissance 4 jouable en réseau vous pouvez utiliser la commande "java -jar jeu.jar" comme pour la version de base.
+Cette version implémente un puissance 4 plus classique car :
+- Le nombre de joueur doit être égale à 2.
+- Les parametrès de la grille et le nombre de parties à gagner pour que le jeu se termine n'ont pas été mis dans un fichier configuration.txt comme il l'a été fait dans la version prédédente.
+- Le jeu se termine au bout d'une partie gagnée par n'importe lequel des deux joueurs.
+- Le fichier log.txt permettant d'avoir un historique des saisies et de la partie n'a pas non plus été implémenté.
+Mais il utilise néanmoins une connexion TCP pour que les deux joueurs puissent jouer sur deux postes différents.
+
+Pour jouer, il suffit de rentrer tout d'abord un pseudonyme (différent de "sortir" si vous souhaitez continuez).
+Puis de choisir le choix numéro 1 dans le menu lorsque vous êtes le premier joueur.
+Une fois que ce joueur est créer, le second joueur peut lui aussi lancer l'application, entrer un pseudonyme et choisir le choix 2 pour rejoindre l'autre joueur.
+Lors de cette étape vous devez entrer une adresse ethernet avec un format valide, puis un numéro de port.
+
+Une fois que tout ceci est fait, le jeu est lancé et le principe de jeu reste le même que le précédent.
+
+Les fonctionnalités manquantes n'ont pas été implémentées par manque de temps.
+De plus si l'adresse rentrée n'est pas celle du joeur ayant créé la partie, une erreur se produira.
+Il en est de même pour le numéro de port.

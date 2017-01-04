@@ -1,0 +1,31 @@
+Erreur saisie Joueur 1
+Joueur 1 est ia toto 
+Erreur saisie Joueur 2
+Joueur 2 est humain je 
+Manche commence
+Joueur 1 joue 2
+Erreur saisie colonne "
+Joueur 2 joue 6
+Joueur 1 joue 1
+Joueur 2 joue 3
+Joueur 1 joue 6
+Erreur colonne non valide 99
+Erreur saisie colonne dvvr
+Joueur 2 joue 6
+Joueur 1 joue 3
+Joueur 2 joue 4
+Joueur 1 joue 5
+Joueur 2 joue 4
+Joueur 1 joue 3
+Joueur 2 joue 3
+Joueur 1 joue 5
+Joueur 2 joue 5
+Joueur 1 joue 1
+Joueur 2 joue 4
+Joueur 1 joue 3
+Joueur 2 joue 4
+Joueur 2 gagne
+Score 0 - 1
+Manche commence
+Joueur 1 joue 1
+Partie finie
